@@ -1,10 +1,10 @@
-package strintBreaker;
+package stringBreakProblem;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class Solution {
+public class StringBreaker {
     public List<String> wordBreak(String userInput, List<String> dictionary) {
         List<String> res = new ArrayList<>();
         if (userInput == null || userInput.length() == 0) {
@@ -45,4 +45,3 @@ public class Solution {
                 == null ? new ArrayList() : temporarryArrayOfWords[temporarryArrayOfWords.length - 1];
     }
 }
-

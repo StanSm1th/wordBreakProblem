@@ -1,4 +1,4 @@
-package strintBreaker;
+package stringBreakProblem;
 
 import java.io.BufferedReader;
 import java.io.IOException;
