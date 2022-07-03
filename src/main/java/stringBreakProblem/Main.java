@@ -23,10 +23,6 @@ public class Main {
         System.out.println("breaking string " + words);
 
         WordsCounter.searchForWordsFromDictionary(wordDict, userInput);
-        //ActualCounter.createMap(wordDict, userInput);
-
-
-
 
 
     }
