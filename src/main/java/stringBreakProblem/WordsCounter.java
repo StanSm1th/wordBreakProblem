@@ -4,26 +4,26 @@ import java.util.List;
 
 public class WordsCounter {
 
-    static void searchForWordsFromDictionary(List<String> wordDict, String userInput) {
-        for (int i = 0; i < wordDict.size(); i++) {
-            String searchForWordFromDictionary = wordDict.get(i);
+    static void searchForWordsFromDictionary(List<String> dictionaryOfWords, String userInput) {
+        for (int i = 0; i < dictionaryOfWords.size(); i++) {
+            String searchForWordFromDictionary = dictionaryOfWords.get(i);
 
             System.out.print(searchForWordFromDictionary + ": ");
 
-            int countOfWords = 0;
-            int currentIndex = 0;
-            while (currentIndex != -1) {
-                currentIndex = userInput.indexOf(searchForWordFromDictionary, currentIndex);
+            int totalWordsCountFromDictionary = 0;
+            int currentIndexOfWord = 0;
+            while (currentIndexOfWord != -1) {
+                currentIndexOfWord = userInput.indexOf(searchForWordFromDictionary, currentIndexOfWord);
 
-                if (currentIndex != -1) {
-                    countOfWords++;
-                    currentIndex += searchForWordFromDictionary.length();
+                if (currentIndexOfWord != -1) {
+                    totalWordsCountFromDictionary++;
+                    currentIndexOfWord += searchForWordFromDictionary.length();
                 } else {
-                    currentIndex = -1;
+                    currentIndexOfWord = -1;
                 }
             }
 
-            System.out.println(countOfWords);
+            System.out.println(totalWordsCountFromDictionary);
 
         }
     }

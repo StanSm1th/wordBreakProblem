@@ -12,17 +12,18 @@ public class Main {
         String userInput;
         userInput = JOptionPane.showInputDialog("enter string");
 
-        StringBreaker wordBreak = new StringBreaker();
+        StringBreaker stringBreaker = new StringBreaker();
         FileReader fileReader = new FileReader();
-        List<String> wordDict = fileReader.getContentFromFile();
+        List<String> dictionaryOfWords = fileReader.getContentFromFile();
 
         System.out.println("dictionary contains" + fileReader.getContentFromFile());
 
-        List<String> words = wordBreak.wordBreak(userInput.toLowerCase(Locale.ROOT), wordDict);
+        List<String> wordsFoundInsideInputString =
+                stringBreaker.wordBreak(userInput.toLowerCase(Locale.ROOT), dictionaryOfWords);
 
-        System.out.println("breaking string " + words);
+        System.out.println("breaking string " + wordsFoundInsideInputString);
 
-        WordsCounter.searchForWordsFromDictionary(wordDict, userInput);
+        WordsCounter.searchForWordsFromDictionary(dictionaryOfWords, userInput);
 
 
     }

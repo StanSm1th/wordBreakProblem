@@ -5,9 +5,9 @@ import java.util.List;
 
 public class StringBreaker {
     public List<String> wordBreak(String userInput, List<String> dictionary) {
-        List<String> res = new ArrayList<>();
+        List<String> resultsList = new ArrayList<>();
         if (userInput == null || userInput.length() == 0) {
-            return res;
+            return resultsList;
         }
 
         ArrayList[] temporarryArrayOfWords = new ArrayList[userInput.length() + 1];
