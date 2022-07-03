@@ -14,7 +14,6 @@ public class StringBreaker {
         List<String> temporarryArrayOfWords[] = new ArrayList[userInput.length() + 1];
         temporarryArrayOfWords[0] = new ArrayList<>();
         temporarryArrayOfWords[0].add("");
-        int wordCount =0;
         
         for (int i = 0; i < userInput.length(); i++) {
             for (int j = i; j >= 0; j--) {
@@ -29,7 +28,6 @@ public class StringBreaker {
                         String current = "";
                         if (i != userInput.length() - 1) {
                             current += temporarryArrayOfWords[j].get(k) + userInput.substring(j, i + 1) + " ";
-                            wordCount++;
                         } else {
                             current += temporarryArrayOfWords[j].get(k) + userInput.substring(j, i + 1);
                         }
@@ -37,9 +35,6 @@ public class StringBreaker {
                     }
                 }
             }
-
-
-
         }
         return temporarryArrayOfWords[temporarryArrayOfWords.length - 1]
                 == null ? new ArrayList() : temporarryArrayOfWords[temporarryArrayOfWords.length - 1];
